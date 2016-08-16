@@ -1,4 +1,4 @@
-package org.creativebee.fileserver.menu.bean;
+package org.creativebee.fileserver.folder.bean;
 
 import java.io.Serializable;
 import java.sql.Timestamp;

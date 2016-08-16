@@ -22,22 +22,26 @@
 			<div class="row">
 
 				<div class="col-md-6">
-					<h3>hogehoge</h3>
-					<p>このサイトはhogehogeサイトです。</p>
+					<h3>Nappy!</h3>
+					<p>このサイトはオンプレミスで提供可能なファイル保管サイトです。</p>
 				</div>
 
 				<div class="col-md-6">
 					<!-- エラーメッセージの表示 -->
-					<div
-						style="border-top: solid 2px; border-top-color: #e6e6e8; border-bottom: solid 1px; border-bottom-color: #e6e6e8; padding: 25px; background: white;">
+					<div style="border-top: solid 2px; border-top-color: #e6e6e8; border-bottom: solid 1px; border-bottom-color: #e6e6e8; padding: 25px; background: white;">
 
 						<!-- 入力フォームの表示 -->
-						<div th:if="${param.error}">エラー: ユーザ名・パスワードが違います。</div>
+						<div th:if="${param.error}">エラー: テナントID・ユーザ名・パスワードが違います。</div>
 						<form th:action="@{/login}" method="post">
 							<div class="form-group">
-								<label class="control-label small" for="username">ユーザ名</label>
-								<input class="form-control" id="username" name="username"
-									type="text" placeholder="ユーザ名" required="required" value="user1"/>
+								<label class="control-label small" for="tenantid">テナントID</label>
+								<input class="form-control" id="tenantid" name="tenantid"
+									type="text" placeholder="テナントID" required="required" value="tenant1"/>
+							</div>
+							<div class="form-group">
+								<label class="control-label small" for="userid">ユーザID</label>
+								<input class="form-control" id="userid" name="userid"
+									type="text" placeholder="ユーザID" required="required" value="user1"/>
 							</div>
 							<div class="form-group">
 								<label class="control-label small" for="password">パスワード</label>
@@ -49,9 +53,6 @@
 									style="margin-top: 40px;">ログイン</button>
 							</div>
 						</form>
-						<div class="text-right">
-							<a href="#">新規利用開始はこちら</a>
-						</div>
 					</div>
 				</div>
 			</div>

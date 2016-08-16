@@ -22,12 +22,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 
-		http.authorizeRequests().antMatchers("/loginForm").permitAll().anyRequest().authenticated();
+		http.authorizeRequests().antMatchers("/index").permitAll().anyRequest().authenticated();
 
-		http.formLogin().loginProcessingUrl("/login").loginPage("/loginForm").failureUrl("/loginForm?error")
-				.defaultSuccessUrl("/folder", true).usernameParameter("username").passwordParameter("password");
+		http.formLogin().loginProcessingUrl("/login").loginPage("/index").failureUrl("/index?error")
+				.defaultSuccessUrl("/folder", true).usernameParameter("userid").passwordParameter("password");
 
-		http.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout**")).logoutSuccessUrl("/loginForm");
+		http.logout().logoutRequestMatcher(new AntPathRequestMatcher("/logout**")).logoutSuccessUrl("/index");
 
 	}
 

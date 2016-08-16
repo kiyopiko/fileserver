@@ -1,12 +1,12 @@
-package org.creativebee.fileserver.menu.controller;
+package org.creativebee.fileserver.folder.controller;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import org.creativebee.fileserver.menu.bean.FileBean;
-import org.creativebee.fileserver.menu.bean.TestTable;
+import org.creativebee.fileserver.folder.bean.FileBean;
+import org.creativebee.fileserver.folder.bean.TestTable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
